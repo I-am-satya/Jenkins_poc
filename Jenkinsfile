@@ -1,6 +1,8 @@
 pipeline {
-    agent any
+    agent {
+         docker { imag 'python:3.9-slim'}
 
+	}
     stages {
         stage('Clone Repository') {
             steps {
